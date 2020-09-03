@@ -1,0 +1,16 @@
+server:
+  port: 50020
+spring:
+  application:
+    name: me-dc-service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.159.1:2181 #10.25.21.41:2181,10.25.21.42:2181,10.25.21.43:2181 #192.168.159.1:2181
+security:
+  oauth2:
+    resource:
+      tokenInfoUri: http://10.25.21.43:12000/oauth/check_token
+    configuration:
+      resourceId: 1
+      clientId: me
+      clientSecret: 123456
